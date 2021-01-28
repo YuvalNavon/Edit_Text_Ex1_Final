@@ -48,15 +48,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        t1.setText(" " + num1);
-        t2.setText(" " + num2);
+        t1.setText("" + num1);
+        t2.setText("" + num2);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (count == 0)
                 {
-                    sum_st = String.valueOf(et1.getText());
+                    sum_st = et1.getText().toString();
                     sum = Integer.parseInt(sum_st);
 
                     if (sum == (num1 + num2)) {
@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
                     count = count + 1;
 
                     num1 = num1 + num2;
-                    t3.setText(" " + num1);
+                    t3.setText("" + num1);
                     num2 = rand.nextInt(90) + 10;
-                    t4.setText(" " + num2);
+                    t4.setText("" + num2);
 
 
                 }
@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                     num1 = num1 + num2;
-                    t5.setText(" " + num1);
+                    t5.setText("" + num1);
                     num2 = rand.nextInt(90) + 10;
-                    t6.setText(" " + num2);
+                    t6.setText("" + num2);
 
                 }
             }
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     count = count + 1;
-                    Toast.makeText(getApplicationContext(), " "  + toast + "/3 ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), ""  + toast + "/3 ", Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -138,16 +138,17 @@ public class MainActivity extends AppCompatActivity {
                 num1 = rand.nextInt(90) + 10;
                 num2 = rand.nextInt(90) + 10;
 
-                t1.setText(" " + num1);
-                t2.setText(" " + num2);
-                t3.setText(" ");
-                t4.setText(" ");
-                t5.setText(" ");
-                t6.setText(" ");
 
-                et1.setText(" ");
-                et2.setText(" ");
-                et3.setText(" ");
+                t1.setText("" + num1);
+                t2.setText("" + num2);
+                t3.setText("");
+                t4.setText("");
+                t5.setText("");
+                t6.setText("");
+
+                et1.setText("");
+                et2.setText("");
+                et3.setText("");
 
                 img1.setImageResource(0);
                 img2.setImageResource(0);
